@@ -58,13 +58,16 @@
 </nav>
 <!-- ========== Compétences ========== -->
     <div class="container-fluid competences" id="competences">
-        <h2>Compétences</h2>
+    <div class="fadeInDown">
+        <h2 class="pt-5">Compétences</h2>
         <div class="border-meghna mb-5"></div>
+    </div>
+
         <div class="container">
             <div class="row">
                 {% for skill in skills %}
                 <div class="col-lg-4 text-center">
-                    <div class="card mb-5 animated animatedFadeInUp fadeInUp">
+                    <div class="card mb-5 fadeInUp">
                         <div class="hexagon">
                             <img src="{{ skill.logo }}" alt="" class="img-img_size">
                         </div>  
@@ -82,13 +85,15 @@
 <section>
 <!-- ========== Réalisations ========== -->
     <div class="container-fluid realisations" id="realisations">
-        <h2>Réalisations</h2>
-        <div class="border-meghna"></div>
+        <div class="fadeInDown">
+            <h2 class="pt-5">Réalisations</h2>
+            <div class="border-meghna"></div>
+        </div>
             <div class="container">
                 <div class="row d-flex justify-content-center">
                         {% for work in works %}
-                        <figure class="image">
-                            <img id="miniature1" class="my-5 mx-5" src="{{ work.screenshot }}">
+                        <figure class="image fadeInUp">
+                            <img class="my-5 mx-5 work" src="{{ work.screenshot }}">
                             <figcaption>{{work.title}}</figcaption>
                         </figure> 
                         {% endfor %}
@@ -101,10 +106,12 @@
 <section>
 <!-- ========== Contact ========== -->
     <div class="container-fluid contact" id="contact">
-        <h2>Contact</h2>
-        <div class="border-meghna mb-5"></div>
+        <div class="fadeInDown">
+            <h2 class="pt-5">Contact</h2>
+            <div class="border-meghna mb-5"></div>
+        </div>
             <div class="container">
-                <div class="row">
+                <div class="row fadeInUp">
                     <div class="col-lg-6 d-none d-lg-block">
                         <h3 class="mb-3">Contactez-moi !</h3>
                         <p>
