@@ -1,0 +1,327 @@
+/* Rendre image fullscreen 
+header{
+width:100%;
+height: 100vh;
+background-image: url('../img/banner1080.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+color: #FFF;
+}
+
+Plus message sur bannière 
+.wrapper{ /* Centrer le texte de la bannière */
+/*
+display: table;
+width: 100%;
+height: 100%;
+}
+
+.content{
+display: table-cell;
+text-align: center;
+vertical-align: middle;
+}
+
+h1{
+font-size: 65px;
+}
+
+.subtitle{
+font-size: 23px;
+} */
+
+/* ==================================== Reset ==================================== */
+
+* {
+margin: 0;
+padding: 0;
+list-style: none;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: none;
+}
+
+a{
+text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ==================================== Header ==================================== */
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/banner2560compressor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #FFF;
+}
+
+header .logo, a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+header .logo:hover, a:hover {
+    color: #999;
+    text-decoration: none;
+}
+
+.wrapper {
+/* Centrer le texte de la bannière */
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#header-title{
+    font-size: 65px;
+}
+
+.subtitle {
+    font-size: 2em;
+    color: #fff;
+}
+/* Scroll arrow down  */
+.box{
+    position: absolute;
+    left: 50%;
+    bottom : 5%;
+    transform: translate(-50%, -50%);
+}
+
+.box span{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: rotate(45deg);
+    margin : -10px;
+    animation: animate 2s infinite;
+}
+
+.box span:nth-child(2){
+    animation-delay: -0.2s;
+    transform: rotate(45deg) translate(-20px, -20px);
+}
+
+.box span:nth-child(3){
+    animation-delay: -0.4s;
+    transform: rotate(45deg);
+}
+
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    } 
+}
+
+
+
+
+/* ==================================== Body ==================================== */
+
+h2 {
+    text-align: center;
+    color: #FFF;
+    padding: 20px 0px;
+}
+
+/* Séparateur */
+.border-meghna{
+    border-top: 2px solid rgba(236,239,241,.07);
+    height: 1px;
+    margin: 15px auto 0;
+    position: relative;
+    width: 30%;
+}
+
+.border-meghna:before {
+    background-color: #fff;
+    content: '';
+    height: 6px;
+    left: 50%;
+    margin-left: -20px;
+    position: absolute;
+    top: -4px;
+    width: 50px;
+    background-color: #57cbcc;
+}
+
+
+
+
+/* ==================================== Compétences ==================================== */
+
+.competences {
+    background-color: #292F36;
+}
+
+.card{
+    background-color: #242930;
+}
+
+.block{
+    background: #242930;
+    padding: 30px;
+    border-bottom: 2px solid transparent;
+    transition: .5s all;
+    margin-bottom: 20px;
+}
+
+
+/* Hexagon */
+
+.hexagon {
+    position: relative;
+    width: 160px; 
+    height: 92.38px;
+    margin: 25% auto;
+    border-left: solid 2px rgba(236,239,241,.07);
+    border-right: solid 2px rgba(236,239,241,.07);
+}
+
+.hexagon:before,
+.hexagon:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 113.14px;
+    height: 113.14px;
+    -webkit-transform: scaleY(0.5774) rotate(-45deg);
+    -ms-transform: scaleY(0.5774) rotate(-45deg);
+    transform: scaleY(0.5774) rotate(-45deg);
+    background-color: inherit;
+    left: 21.4315px;
+}
+
+.hexagon:before {
+    top: -56.5685px;
+    border-top: solid 2.8284px rgba(236,239,241,.07);
+    border-right: solid 2.8284px rgba(236,239,241,.07);
+}
+
+.hexagon:after {
+    bottom: -56.5685px;
+    border-bottom: solid 2.8284px rgba(236,239,241,.07);
+    border-left: solid 2.8284px rgba(236,239,241,.07);
+}
+
+
+
+
+/* ==================================== Réalisations ==================================== */
+
+.realisations{
+    background-color: #353B43;
+    width: 100%;
+}
+
+.image img:hover{
+    opacity: 0.7;
+}
+
+.image img:hover + figcaption {
+	visibility: visible;
+}
+
+figcaption{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    box-sizing: border-box;
+    visibility: hidden;
+    font-size: 4em;
+    color: #353B43;
+}
+	
+figure{
+    position:relative;
+}
+
+
+
+
+/* ==================================== Formulaires ==================================== */
+
+.contact{
+    background-color: #292F36;
+}
+
+
+
+
+/* ==================================== Footer ==================================== */
+
+footer {
+background-color: #353B43;
+padding: 70px 0 50px 0;
+position: relative;
+}
+
+p{
+    color: #737F8D;
+    font-size: 1.2em;
+}
+
+h3{
+    color: #AFBAC4;
+}
+
+label {
+    display: none;
+}
+
+input, textarea{
+    background-color: transparent;
+    padding: 5px 10px;
+    color: #ddd;
+    border: 1px solid rgba(236,239,241,.07);
+    width: 100%;
+    margin-top: 15px;
+}
+
+#contact-submit{
+    border: 1px solid rgba(236,239,241,.07);
+    background: #57cbcc;
+    padding: 12px 0;
+    width: 100%;
+    margin: 5px 0px;
+}
+
+.social {
+    font-size: 25px;
+    color: #57CBCC;
+}
+
+::placeholder, button {
+    color: #fff;
+}
+
+

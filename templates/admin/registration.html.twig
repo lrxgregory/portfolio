@@ -1,0 +1,20 @@
+{% extends 'admin/admin.html.twig' %}
+
+{% block title %}Administration du portfolio{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center mb-5">Inscription</h1>
+            <div class="row">
+        <div class="col">
+            <div class="card text-white bg-secondary mb-3" style="max-width: 100%;">
+                <div class="card-body">
+                    {{form_start(form)}}
+                    {{form_widget(form)}}
+                    <button type="submit" class="btn btn-info mt-2">Inscription</button>
+                    {{form_end(form)}}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

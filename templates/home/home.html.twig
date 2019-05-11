@@ -1,0 +1,136 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<header>
+    {% for label, messages in app.flashes %}
+        <div class="container">
+            <div class="alert alert-{{ label }}">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+    <div class="wrapper">
+        <div class="content slide-in-left">
+            <h1 id="header-title">Grégory Leroux</h1>
+            <p class="subtitle">Développeur web</p>  
+            <div class="box">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>    
+</header>
+<section>
+<!-- ==========    Navbar   ========== -->
+<nav id="navigation" class="navbar navbar-expand-lg navigation sticky-top bg-dark">
+    <div class="container">
+
+            <!-- logo -->
+            <a class="navbar-brand logo" href="#navigation">
+                    {# <img src="logo.png" alt="Logo"> #}
+                    <span class="pl-2 font-weight-bold">Grégory Leroux</span>
+            </a>
+            <!-- /logo -->
+
+            <!-- responsive nav button -->
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- /responsive nav button -->
+
+            <!-- main nav -->
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navigation-menu">                            
+                            <li class="nav-item"><a class="nav-link" data-scroll="competences" href="#competences">Compétences</a></li>
+                            
+                            <li class="nav-item"><a class="nav-link" data-scroll="realisations" href="#realisations">Réalisations</a></li>
+                            
+                            <li class="nav-item"><a class="nav-link" data-scroll="contact" href="#contact">Contact</a></li>
+                    </ul>
+            </div>
+            
+            <!-- /main nav -->
+    </div>
+</nav>
+<!-- ========== Compétences ========== -->
+    <div class="container-fluid competences" id="competences">
+        <h2>Compétences</h2>
+        <div class="border-meghna mb-5"></div>
+        <div class="container">
+            <div class="row">
+                {% for skill in skills %}
+                <div class="col-lg-4 text-center">
+                    <div class="card mb-5 animated animatedFadeInUp fadeInUp">
+                        <div class="hexagon">
+                            <img src="{{ skill.logo }}" alt="" class="img-img_size">
+                        </div>  
+                        <div class="text-center">
+                            <h3>{{ skill.competence }}</h3>
+                            <p>{{ skill.competenceDetails }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+<!-- ========== Réalisations ========== -->
+    <div class="container-fluid realisations" id="realisations">
+        <h2>Réalisations</h2>
+        <div class="border-meghna"></div>
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                        {% for work in works %}
+                        <figure class="image">
+                            <img id="miniature1" class="my-5 mx-5" src="{{ work.screenshot }}">
+                            <figcaption>{{work.title}}</figcaption>
+                        </figure> 
+                        {% endfor %}
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+<!-- ========== Contact ========== -->
+    <div class="container-fluid contact" id="contact">
+        <h2>Contact</h2>
+        <div class="border-meghna mb-5"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <h3 class="mb-3">Contactez-moi !</h3>
+                        <p>
+                            <i class="fas fa-map-marker-alt my-3 mr-2"></i>Valenciennes - 59300 - France<br>
+                            <i class="fas fa-mobile-alt my-3 mr-2"></i>06 99 14 74 96<br>
+                            <i class="fas fa-envelope my-3 mr-2"></i>lerouxgregory@outlook.com
+                        </p>                    
+                    </div>
+                    <div class="col-lg-6">                            
+                        {{ form_start(form) }}
+                        {{ form_widget(form) }}
+                        <button type="submit" id="contact-submit" class="mb-4" value="Submit">Envoyer</button>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+<footer>
+    <p class="text-center text-white">Grégory Leroux</p>
+    <div class="d-flex justify-content-center">
+        <a href="mailto:lerouxgregory@outlook.com" target="_blank"><i class="social fas fa-envelope fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/gregory-leroux" class="px-5" target="_blank"><i class="social fab fa-linkedin-in fa-2x"></i></a>
+        <a href="https://github.com/lrxgregory" target="_blank"><i class="social fab fa-github fa-2x"></i></a>
+    </div>
+    
+</footer>
+
+{% endblock %}
