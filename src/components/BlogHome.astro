@@ -10,24 +10,38 @@ const posts = (await getCollection('blog')).sort(
 
 ---
 
-<section id="blog" class="flex flex-col items-center w-full h-full md:max-w-full  justify-center flex-wrap px-4">
-
-  <Title contenido="My articles" margin="2rem"/>
-  <div class="flex self-center gap-[20px] justify-center min-w-[30rem]  md:max-w-full flex-wrap flex-col md:flex-row">
-    {
-      posts.slice(0, 3).map((post) => (
-        <CardBlog
-        title={post.data.title}
-          content={post.data.description}
-          img={post.data.heroImage}
-          href={`/blog/${post.slug}/`}>
-
-         <FormattedDate  slot="date" clase="text-white" date={post.data.pubDate}/>
-         </CardBlog>
-      ))
-    }
-  </div>
+<section
+	id="blog"
+	class="flex flex-col w-full  justify-center items-center h-auto"
+>
+	<div class="blog__container">
+		<Title contenido="My articles" />
+		<div class="blog__elements">
+			{
+        posts.slice(0, 3).map((post) => (
+          <CardBlog
+          title={post.data.title}
+            content={post.data.description}
+            img={post.data.heroImage}
+            href={`/blog/${post.slug}/`}>
+  
+           <FormattedDate  slot="date" clase="text-white" date={post.data.pubDate}/>
+           </CardBlog>
+        ))
+      }
+		</div>
+	</div>
   <div class="flex justify-center m-5 max-w-full px-3">
-    <Boton href="/blog" texto="Ver mas"/>
+    <Boton href="/blog" texto="See more"/>
   </div>
 </section>
+
+<style>
+	.blog__elements {
+		max-width: var(--max-width);
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 4rem;
+	}
+</style>

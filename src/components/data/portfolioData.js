@@ -17,77 +17,50 @@
  */
 export const portafolioData = [
 	{
-		imgSrc: 'https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2021/06/copy-of-the-6-best-restaurant-website-templates-1.png',
-		title: 'Restaurant',
-		skills: ['React', 'StyledComponents'],
+		imgSrc: '/public/img/tickettoridereact.png',
+		title: 'Ticket To Ride React',
+		skills: ['React', 'TypeScript', 'HTML', 'CSS'],
 		descripcion:
-			'Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.',
-		demoURL: '',
-		repoURL: '',
-		anim: 'fade-right',
-	},
-	{
-		imgSrc: 'https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/299377097/original/7eb7dcebe244fcf5ad75d92b0969fc116946bd57/create-professional-amd-responsive-wordpress-website.jpg',
-		title: 'E-commerce',
-		skills: ['JavaScript', 'Bootstrap'],
-		descripcion:
-			' Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.',
-		demoURL: '',
-		repoURL: '',
-		anim: 'fade-up',
-		averageBrightness: 0.1,
-	},
-	{
-		imgSrc: 'https://i0.wp.com/themes.svn.wordpress.org/cafe-cafeteria/1.5.3/screenshot.png',
-		title: 'Coffe Store',
-		skills: ['React', 'CSS'],
-		descripcion:
-			'Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.',
-		demoURL: '',
-		repoURL: '',
+			'A website connect to the API created with nodeJS to calculate score.',
+		demoURL: 'https://react-ticket-to-ride.vercel.app/',
+		repoURL: 'https://github.com/lrxgregory/react-ticket-to-ride',
 		anim: 'fade-left',
 	},
 	{
-		imgSrc: 'https://www.corse.mx/cdn/shop/files/tienda_lenceria-lenceria-hot_sale-ofertas-mexico-lenceria_seyx-encaje-corse_mx-corse_lenceria_1200_x_560_px_13.png?v=1712270274&width=1500',
-		title: 'Coffe Store',
-		skills: ['React', 'CSS'],
+		imgSrc: '/public/img/tickettorideapi.png',
+		title: 'Ticket To Ride NodeJS API',
+		skills: ['NodeJS'],
 		descripcion:
-			'Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.',
-		demoURL: '',
-		repoURL: '',
+			'An API with the data of the scores of the differents roads and destinations.',
+		demoURL: 'https://ticket-to-ride-api-rest-node-js.onrender.com/api-docs',
+		repoURL: 'https://github.com/lrxgregory/node-ticket-to-ride-api-rest',
 		anim: 'fade-left',
 	},
 	{
-		imgSrc: 'https://i0.wp.com/themes.svn.wordpress.org/cafe-cafeteria/1.5.3/screenshot.png',
-		title: 'Coffe Store',
-		skills: ['React', 'CSS'],
+		imgSrc: '/public/img/falshcard.PNG',
+		title: 'Flashcard generator',
+		skills: ['JavaScript', 'CSS', 'HTML','PHP'],
 		descripcion:
-			'Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.',
-		demoURL: '',
-		repoURL: '',
-		anim: 'fade-left',
-	},
-	{
-		imgSrc: 'https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2021/06/copy-of-the-6-best-restaurant-website-templates-1.png',
-		title: 'Restaurant',
-		skills: ['React', 'StyledComponents'],
-		descripcion:
-			'Laboris ex laboris mollit esse fugiat aute cillum nostrud enim dolor sit. Reprehenderit et non nulla irure aute nostrud commodo aute.',
-		demoURL: '',
-		repoURL: '',
+			'A website to create flashcard from a csv file. I created this website to help me to generate many flashcard to learning spanish.',
+		demoURL: 'https://flashcardgenerator.online/',
+		repoURL: 'https://github.com/lrxgregory/flashcards',
 		anim: 'fade-right',
 	}
 ];
 
 const skillIcons = {
+	TypeScript: 'skill-icons:typescript',
 	JavaScript: 'skill-icons:javascript',
 	React: 'skill-icons:react-dark',
 	Astro: 'skill-icons:astro',
+	HTML: 'skill-icons:html',
 	CSS: 'skill-icons:css',
 	Sass: 'skill-icons:sass',
 	StyledComponents: 'skill-icons:styledcomponents',
 	Bootstrap: 'skill-icons:bootstrap',
 	Tailwind: 'skill-icons:tailwindcss-dark',
+	PHP: 'skill-icons:php-dark',
+	NodeJS: 'skill-icons:nodejs-dark'
 };
 
 /**
