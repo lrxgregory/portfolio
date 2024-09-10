@@ -141,3 +141,9 @@
 	align-items: center;
 	gap: 4px;
 }
+
+.portfolio__container {
+	padding: 8rem 3.1rem;
+	flex-direction: column-reverse;
+	align-items: center;
+}

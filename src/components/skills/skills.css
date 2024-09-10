@@ -18,6 +18,9 @@
 @media screen and (max-width: 768px) {
 	#skills {
 		flex-direction: column-reverse;
+		padding: 8rem 3.1rem;
+        flex-direction: column-reverse;
+        align-items: center;
 	}
 	#skills .text-content {
 		max-width: 100%;

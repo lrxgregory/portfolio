@@ -1,6 +1,6 @@
 footer {
     width: 100%;
-    background: rgb(19, 19, 19);
+    background: var(--site-bg) no-repeat;
     display: flex;
     justify-content: space-between;
     min-height: 20dvh;
