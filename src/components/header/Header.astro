@@ -2,16 +2,22 @@
 import './header.css';
 const { origin } = Astro.props;
 import Logo from '../Logo.astro';
+
+type MenuItem = {
+	link: string;
+	content: string;
+	icon: string;
+};
 ---
 
 <header class="header">
 	<div class="header__container">
 		<Logo name="Grégory Leroux"/>
 		<nav class="links"   tabindex="0.1">
-			<button class="menu__btn" >Menú</button>
+			<button class="menu__btn" >Menu</button>
 			<ul class="header__list">
 				{
-					origin.map((data) => (
+					origin.map((data: MenuItem) => (
 						<li>
 							<a class="menu__link" href={data.link}>
 								<span class="icon__container" >
