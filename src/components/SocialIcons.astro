@@ -5,18 +5,19 @@ const socialLinks = [
 		title: 'LinkedIn',
 		icon: 'simple-icons:linkedin',
 		href: 'https://www.linkedin.com/in/gregoryleroux/',
-
+		aria_label: 'Visit Gregory Leroux\'s LinkedIn profile'
 	},
 	{
 		title: 'Github',
 		icon: 'mdi:github',
 		href: 'https://github.com/lrxgregory/',
-
+		aria_label: 'Visit Gregory Leroux\'s GitHub repository'
 	},
 	{
 		title: 'CV',
 		icon: 'tabler:file-cv',
 		href: 'https://drive.google.com/file/d/1K_OGl6GLBrHtgyFbQSAyE5YgyHSXJK_3/view',
+		aria_label: 'Visit Gregory Leroux\'s Curiculum">'
 	},
 ];
 ---
@@ -28,6 +29,7 @@ const socialLinks = [
                 href={data.href}
                 target="_blank"
                 rel="nofollow noreferrer noopener"
+				aria-label={data.aria_label}
             >
                 <iconify-icon
 					class=`skill__icon ${data.title}`
