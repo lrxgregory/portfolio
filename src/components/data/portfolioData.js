@@ -17,7 +17,7 @@
  */
 export const portafolioData = [
 	{
-		imgSrc: '/public/img/tickettoridereact.png',
+		imgSrc: '/img/tickettoridereact.png',
 		title: 'Ticket To Ride React',
 		skills: ['React', 'TypeScript', 'HTML', 'CSS'],
 		descripcion:
@@ -27,7 +27,7 @@ export const portafolioData = [
 		anim: 'fade-left',
 	},
 	{
-		imgSrc: '/public/img/tickettorideapi.png',
+		imgSrc: '/img/tickettorideapi.png',
 		title: 'Ticket To Ride NodeJS API',
 		skills: ['NodeJS'],
 		descripcion:
@@ -37,7 +37,7 @@ export const portafolioData = [
 		anim: 'fade-left',
 	},
 	{
-		imgSrc: '/public/img/falshcard.PNG',
+		imgSrc: '/img/falshcard.PNG',
 		title: 'Flashcard generator',
 		skills: ['JavaScript', 'CSS', 'HTML','PHP'],
 		descripcion:
