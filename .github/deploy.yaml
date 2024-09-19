@@ -1,0 +1,62 @@
+name: Deploy Astro site to Hostinger
+
+on:
+    push:
+        branches:
+            - feature/github-action-deploy
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v2
+              with:
+                  node-version: '20'
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Build Astro site
+              run: npm run build
+
+            - name: Setup SSH key
+              uses: shimataro/ssh-key-action@v2
+              with:
+                  key: ${{ secrets.SERVER_SSH_KEY }}
+                  known_hosts: ${{ secrets.KNOWN_HOSTS }}
+
+            - name: Create backup of the current stagingPortfolio folder
+              run: |
+                  ssh -p ${{ secrets.REMOTE_PORT }} ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} << 'EOF'
+                    # Navigate to the target directory
+                    cd /domains/gregoryleroux.com/public_html/websites/
+
+                    # Create a backup of the current stagingPortfolio folder
+                    if [ -d "stagingPortfolio" ]; then
+                      echo "Creating backup of the current folder..."
+                      cp -r stagingPortfolio stagingPortfolio_backup
+                    fi
+
+                    # Clean up the stagingPortfolio directory (optional)
+                    echo "Cleaning up old files..."
+                    find stagingPortfolio -type f -not -name '.htaccess' -delete
+
+                    echo "Deployment backup and cleanup completed, ready for transferring new files..."
+                  EOF
+
+            - name: Transfer files via SCP
+              uses: appleboy/scp-action@v0.1.3
+              with:
+                  host: ${{ secrets.REMOTE_HOST }}
+                  username: ${{ secrets.REMOTE_USER }}
+                  key: ${{ secrets.SERVER_SSH_KEY }}
+                  source: './dist/*'
+                  target: '/domains/gregoryleroux.com/public_html/websites/stagingPortfolio/'
+
+            - name: Notify deployment success
+              run: echo "Deployment completed successfully!"
