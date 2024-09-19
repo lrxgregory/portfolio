@@ -6,9 +6,9 @@ on:
             - feature/github-action-deploy
 
 jobs:
-    build-and-deploy:
+    build:
+        name: Build
         runs-on: ubuntu-latest
-
         steps:
             - name: Checkout code
               uses: actions/checkout@v2
@@ -24,6 +24,11 @@ jobs:
             - name: Build Astro site
               run: npm run build
 
+    deploy:
+        name: Deploy to Hostinger
+        runs-on: ubuntu-latest
+        needs: build
+        steps:
             - name: Setup SSH key
               uses: shimataro/ssh-key-action@v2
               with:
@@ -55,6 +60,7 @@ jobs:
                   host: ${{ secrets.REMOTE_HOST }}
                   username: ${{ secrets.REMOTE_USER }}
                   key: ${{ secrets.SERVER_SSH_KEY }}
+                  port: ${{ secrets.REMOTE_PORT }}
                   source: './dist/*'
                   target: '/domains/gregoryleroux.com/public_html/websites/stagingPortfolio/'
 
