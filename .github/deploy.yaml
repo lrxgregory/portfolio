@@ -3,7 +3,7 @@ name: Deploy Astro site to Hostinger
 on:
     push:
         branches:
-            - feature/github-action-deploy
+            - main
 
 jobs:
     build:
