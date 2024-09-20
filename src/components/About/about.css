@@ -38,6 +38,7 @@
 .about__text {
 	font-size: 2.1rem;
 	max-width: 70.19rem;
+	color: var(--primary-100);
 }
 
 @media screen and (max-width: 768px) {
