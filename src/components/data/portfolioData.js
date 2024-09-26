@@ -17,6 +17,16 @@
  */
 export const portafolioData = [
 	{
+		imgSrc: '/img/nike.png',
+		title: 'Clone Nike website',
+		skills: ['HTML', 'Tailwind'],
+		descripcion:
+			'A clone of the Nike website, I used Tailwind to create the website.',
+		demoURL: 'https://nike-clone.gregoryleroux.com/',
+		repoURL: 'https://github.com/lrxgregory/nike-clone-tailwind',
+		anim: 'fade-left',
+	},
+	{
 		imgSrc: '/img/tickettoridereact.png',
 		title: 'Ticket To Ride React',
 		skills: ['React', 'TypeScript', 'HTML', 'CSS'],
