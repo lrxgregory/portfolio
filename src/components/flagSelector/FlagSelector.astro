@@ -1,0 +1,42 @@
+---
+import './flagSelector.css';
+
+const { lang, isBlog } = Astro.props;
+
+const flags = [
+	{
+		lang: 'en',
+		url: '/en',
+		flagUrl:
+			'https://cdn.countryflags.com/thumbs/united-kingdom/flag-round-250.png',
+	},
+	{
+		lang: 'fr',
+		url: '/fr',
+		flagUrl:
+			'https://cdn.countryflags.com/thumbs/france/flag-round-250.png',
+	},
+	{
+		lang: 'es',
+		url: '/es',
+		flagUrl: 'https://cdn.countryflags.com/thumbs/spain/flag-round-250.png',
+	},
+];
+---
+
+<li class="flag__container">
+	{
+		flags.map(
+			(flag) =>
+				!isBlog &&
+				lang !== flag.lang && (
+					<a
+						href={flag.url}
+						id={flag.lang}
+						style={`background-image: url(${flag.flagUrl});`}
+						class="flag-icon"
+					/>
+				)
+		)
+	}
+</li>

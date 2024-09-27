@@ -8,16 +8,23 @@ import Hero from '../components/hero/Hero.astro';
 import Portfolio from '../components/Portfolio.astro';
 // import Skills from '../components/skills/Skills.astro';
 import Layout from '../layouts/Layout.astro';
+import { getTranslation } from '../utils/getTranslation.js';
+
+// Récupérer la langue via l'URL (ou utiliser 'en' par défaut)
+const lang = new URL(Astro.request.url).pathname.replace(/^\/+/, '') || 'en';
+
+const translations = getTranslation(lang);
 ---
 
 <Layout title="Grégory Leroux | Developer PHP">
-	<Header origin={mainMenu} />
+	<Header origin={mainMenu} lang={lang} />
 	<main class="self-center w-full">
-		<Hero />
-		<About />
+		<!-- Passer la traduction au composant Hero -->
+		<Hero translations={translations} />
+		<About translations={translations} />
 		<!-- <Skills /> -->
-		<Portfolio />
-		<BlogHome />
+		<Portfolio translations={translations} />
+		<BlogHome translations={translations} />
 	</main>
-	<Footer/>
+	<Footer translations={translations} />
 </Layout>

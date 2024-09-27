@@ -1,39 +1,44 @@
 ---
-import Title from "../components/atoms/Title.astro";
 import { getCollection } from 'astro:content';
-import Boton from "./atoms/Boton.astro";
-import FormattedDate from "./FormattedDate.astro";
-import CardBlog from "./CardBlog.astro";
+import Title from '../components/atoms/Title.astro';
+import Boton from './atoms/Boton.astro';
+import CardBlog from './CardBlog.astro';
+import FormattedDate from './FormattedDate.astro';
 const posts = (await getCollection('blog')).sort(
-(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
+const { translations } = Astro.props;
 ---
 
 <section
 	id="blog"
-	class="flex flex-col w-full  justify-center items-center h-auto"
+	class="flex flex-col w-full justify-center items-center h-auto"
 >
 	<div class="blog__container">
-		<Title contenido="My articles" />
+		<Title contenido={translations.myArticles} />
 		<div class="blog__elements">
 			{
-        posts.slice(0, 3).map((post) => (
-          <CardBlog
-          title={post.data.title}
-            content={post.data.description}
-            img={post.data.heroImage}
-            href={`/blog/${post.slug}/`}>
-  
-           <FormattedDate  slot="date" clase="text-white" date={post.data.pubDate}/>
-           </CardBlog>
-        ))
-      }
+				posts.slice(0, 3).map((post) => (
+					<CardBlog
+						title={post.data.title}
+						content={post.data.description}
+						img={post.data.heroImage}
+						href={`/blog/${post.slug}/`}
+					>
+						<FormattedDate
+							slot="date"
+							clase="text-white"
+							date={post.data.pubDate}
+						/>
+					</CardBlog>
+				))
+			}
 		</div>
 	</div>
-  <div class="flex justify-center m-5 max-w-full px-3">
-    <Boton href="/blog" texto="See more"/>
-  </div>
+	<div class="flex justify-center m-5 max-w-full px-3">
+		<Boton href="/blog" texto={translations.seeMore} />
+	</div>
 </section>
 
 <style>

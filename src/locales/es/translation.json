@@ -1,0 +1,22 @@
+{
+	"hello": "Hola, soy Grégory",
+	"job": "Desarrollador PHP",
+	"aboutMe": "Acerca de mí",
+	"aboutMeDescription1": "PHP | Desarrollador <strong>Symfony</strong> | 5 años de experiencia en la creación de soluciones robustas de comercio electrónico",
+	"aboutMeDescription2": "Apasionado por crear sistemas escalables y eficientes, he pasado los últimos 5 años dominando el arte del desarrollo backend con un enfoque en plataformas de comercio electrónico.",
+	"aboutSpecialized": "Me especializo en:",
+	"aboutMeSpecialization": [
+		"• Desarrollo de módulos personalizados para <strong>Prestashop</strong>",
+		"• Construcción de microservicios con <strong>PHP</strong> y <strong>Symfony</strong> para <strong>Shopify</strong>"
+	],
+	"aboutMeDescription3": "Siempre ansioso por adentrarme en nuevas tecnologías, estoy comprometido con el aprendizaje continuo.",
+	"aboutLetsConnect": "Conectemos si estás buscando:",
+	"aboutMeConnect": [
+		"• Soluciones de comercio electrónico escalables",
+		"• Experiencia en <strong>PHP</strong>, <strong>Symfony</strong> y <strong>Prestashop</strong>"
+	],
+	"aboutMeDescription4": "💬 Siempre estoy abierto a compartir ideas y explorar oportunidades de colaboración. ¡Construyamos algo increíble juntos!",
+	"seeMore": "Ver más",
+	"portfolio": "Portafolio",
+	"myArticles": "Mis artículos"
+}

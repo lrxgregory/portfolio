@@ -36,7 +36,7 @@
 	align-items: center;
 	justify-content: space-evenly;
 	gap: 2rem;
-	margin-right: 4.4rem;
+	margin-right: 0;
 }
 
 .header .links {
@@ -75,6 +75,11 @@
 .menu__btn {
 	display: none;
 }
+
+.links .header__list .flag__container {
+	display: block;
+}
+
 @media screen and (max-width: 768px) {
 	.header {
 		padding: 1rem;
@@ -116,6 +121,10 @@
 	.links:not(:hover) .header__list {
 		opacity: 0;
 		pointer-events: none;
+	}
+
+	.links:not(:hover) .header__list .flag__container {
+		display: none;
 	}
 
 	.icon__container {

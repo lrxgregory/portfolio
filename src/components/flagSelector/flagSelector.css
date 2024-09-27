@@ -1,0 +1,45 @@
+.flag-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-size: cover;
+    margin-top: 0.5rem;
+    color: transparent; /* Cache le texte */
+}
+
+.flag-icon:first-child {
+    margin-right: 1rem;
+}
+
+a#en:hover::after,
+a#fr:hover::after,
+a#es:hover::after {
+    transform: scaleX(0);
+}
+
+.flag__container {
+    list-style-type: none;
+}
+
+@media screen and (max-width: 768px) {
+    .flag__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flag-icon {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        background-size: cover;
+        margin: 0 0.5rem;
+        color: transparent;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .flag__container {
+        display: none; /* Cacher le conteneur des drapeaux */
+    }
+}

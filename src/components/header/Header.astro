@@ -1,38 +1,42 @@
 ---
-import './header.css';
-const { origin } = Astro.props;
+import FlagSelector from '../flagSelector/FlagSelector.astro';
 import Logo from '../Logo.astro';
+import './header.css';
+const { origin, lang } = Astro.props;
 
 type MenuItem = {
 	link: string;
-	content: string;
+	content: { [key: string]: string };
 	icon: string;
 };
+
+const currentURL = Astro.url.pathname;
+const isBlog = currentURL.includes('/blog');
 ---
 
 <header class="header">
 	<div class="header__container">
-		<Logo name="Grégory Leroux"/>
-		<nav class="links"   tabindex="0.1">
-			<button class="menu__btn" >Menu</button>
+		<Logo name="Grégory Leroux" lang={lang} />
+		<nav class="links" tabindex="0.1">
 			<ul class="header__list">
 				{
 					origin.map((data: MenuItem) => (
 						<li>
 							<a class="menu__link" href={data.link}>
-								<span class="icon__container" >
+								<span class="icon__container">
 									<iconify-icon
 										class="icons"
 										icon={data.icon}
 										width="20"
 										height="20"
 									/>
-									{data.content}
+									{data.content[lang]}
 								</span>
 							</a>
 						</li>
 					))
 				}
+				<FlagSelector lang={lang} isBlog={isBlog} />
 			</ul>
 		</nav>
 	</div>

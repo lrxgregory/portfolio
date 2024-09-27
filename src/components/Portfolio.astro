@@ -1,17 +1,25 @@
 ---
 import Title from './atoms/Title.astro';
-import { getPortafolioData} from "../components/data/portfolioData.js"
+import { getPortafolioData } from '../components/data/portfolioData.js';
 import Card from './card-portfolio/CardPortfolio.astro';
+
+const { translations, lang } = Astro.props;
 ---
 
 <section
 	id="portfolio"
-	class="flex flex-col w-full  justify-center items-center h-auto min-h-[100dvh]  "
+	class="flex flex-col w-full justify-center items-center h-auto min-h-[100dvh]"
 >
 	<div class="portfolio__container">
-		<Title contenido="Portfolio" />
+		<!-- Passer la traduction pour le titre -->
+		<Title contenido={translations.portfolio} />
 		<div class="portfolio__elements">
-			{getPortafolioData.map((props) => <Card {...props} />)}
+			{
+				getPortafolioData.map((props) => (
+					<!-- Passer la langue en prop pour chaque carte -->
+					<Card {...props} lang={lang}/>
+				))
+			}
 		</div>
 	</div>
 </section>

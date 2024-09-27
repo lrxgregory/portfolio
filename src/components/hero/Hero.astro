@@ -1,24 +1,23 @@
 ---
 import Boton from '../atoms/Boton.astro';
 import './hero.css';
+
+const { translations } = Astro.props;
 ---
 
 <section class="hero">
-
 	<div class="hero__container">
 		<div class="text__content">
-			<h1 class="hero__title color__gradiente">Hello, I’m Gregory</h1>
-			<p class="hero__text">
-				Developer PHP
-			</p>
-			<Boton href="#about" texto="About me"/>
+			<p class="hero__title color__gradiente">{translations.hello}</p>
+			<h1 class="hero__text">{translations.job}</h1>
+			<Boton href="#about" texto={translations.aboutMe} />
 		</div>
-    <img
-		class="hero__img"
-		src="/img/emoji.png"
-		alt="Grégory Leroux"
-		width="384"
-    	height="384"
-	/>
+		<img
+			class="hero__img"
+			src="/img/emoji.png"
+			alt="Grégory Leroux"
+			width="384"
+			height="384"
+		/>
 	</div>
 </section>

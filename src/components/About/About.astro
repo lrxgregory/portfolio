@@ -1,9 +1,9 @@
 ---
 import SocialIcons from '../SocialIcons.astro';
 import Title from '../atoms/Title.astro';
-import "./about.css";
+import './about.css';
 
-
+const { translations } = Astro.props;
 ---
 
 <section id="about" class="about">
@@ -15,33 +15,33 @@ import "./about.css";
 		/>
 
 		<div class="about__content">
-			<Title margin="1rem" contenido="About me" />
-			<p class="about__text">
-				<strong>PHP</strong> | <strong>Symfony</strong> <strong></strong>Developer | 5 years of expertise in building robust e-commerce solutions
-			</p>
-			<p class="about__text">
-				Passionate about creating scalable and efficient systems, I’ve spent the past 5 years mastering the art of backend development with a focus on e-commerce platforms. 
-			</p>
-			<ul class="about__text">I specialize in:
-				<li>• Developing custom modules for <strong>Prestashop</strong></li>
-				<li>• Building microservices with <strong>PHP</strong> and <strong>Symfony</strong> for <strong>Shopify</strong> </li>
-			</ul>
-			<p class="about__text">
-				Always eager to dive into new technologies, I’m committed to continuous learning and optimizing performance at every step.
-			</p>
-			
+			<Title margin="1rem" contenido={translations.aboutMe} />
+
+			<p
+				class="about__text"
+				set:html={translations.aboutMeDescription1}
+			/>
+			<p class="about__text">{translations.aboutMeDescription2}</p>
 			<ul class="about__text">
-				Let’s connect if you’re looking for:
-				<li>• Scalable e-commerce solutions</li>
-				<li>• Expertise in PHP, Symfony and Prestashop</li>
-				<li>• A backend developer who thrives in high-demand environments</li>
+				{translations.aboutSpecialized}
+				{
+					translations.aboutMeSpecialization.map((item: string) => (
+						<li set:html={item} />
+					))
+				}
 			</ul>
-			
-			<p class="about__text">
-				💬 I’m always open to sharing ideas and exploring collaboration opportunities. Let’s build something amazing together!
-			</p>
-			<SocialIcons width="25" height="25"/>
+			<p class="about__text">{translations.aboutMeDescription3}</p>
+			<ul class="about__text">
+				{translations.aboutLetsConnect}
+				{
+					translations.aboutMeConnect.map((item: string) => (
+						<li set:html={item} />
+					))
+				}
+			</ul>
+			<p class="about__text">{translations.aboutMeDescription4}</p>
+
+			<SocialIcons width="25" height="25" />
 		</div>
 	</div>
-
 </section>

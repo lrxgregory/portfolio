@@ -18,44 +18,74 @@
 export const portafolioData = [
 	{
 		imgSrc: '/img/nike.png',
-		title: 'Clone Nike website',
+		title: {
+			en: 'Clone Nike Website',
+			fr: 'Clone du site de Nike',
+			es: 'Clonar el sitio web de Nike',
+		},
 		skills: ['HTML', 'Tailwind'],
-		descripcion:
-			'A clone of the Nike website, I used Tailwind to create the website.',
+		descripcion: {
+			en: 'A clone of the Nike website, I used Tailwind to create the website.',
+			fr: "Un clone du site web de Nike, j'ai utilisé Tailwind pour créer le site web.",
+			es: 'Un clon del sitio web de Nike, utilicé Tailwind para crear el sitio web.',
+		},
+
 		demoURL: 'https://nike-clone.gregoryleroux.com/',
 		repoURL: 'https://github.com/lrxgregory/nike-clone-tailwind',
 		anim: 'fade-left',
 	},
 	{
 		imgSrc: '/img/tickettoridereact.png',
-		title: 'Ticket To Ride React',
+		title: {
+			en: 'Ticket To Ride React',
+			fr: 'Les aventuriers du rail React',
+			es: 'Ticket To Ride React',
+		},
 		skills: ['React', 'TypeScript', 'HTML', 'CSS'],
-		descripcion:
-			'A website connect to the API created with nodeJS to calculate score.',
+		descripcion: {
+			en: 'A website connect to the API created with nodeJS to calculate score.',
+			fr: "Un site web se connecte à l'API créée avec nodeJS pour calculer le score.",
+			es: 'Un sitio web se conecta a la API creada con nodeJS para calcular la puntuación.',
+		},
 		demoURL: 'https://react-ticket-to-ride.vercel.app/',
 		repoURL: 'https://github.com/lrxgregory/react-ticket-to-ride',
 		anim: 'fade-left',
 	},
 	{
 		imgSrc: '/img/tickettorideapi.png',
-		title: 'Ticket To Ride NodeJS API',
+		title: {
+			en: 'Ticket To Ride NodeJS API',
+			fr: 'API NodeJS pour les Aventuriers du Rail',
+			es: 'Ticket To Ride API NodeJS',
+		},
 		skills: ['NodeJS'],
-		descripcion:
-			'An API with the data of the scores of the differents roads and destinations.',
-		demoURL: 'https://ticket-to-ride-api-rest-node-js.onrender.com/api-docs',
+		descripcion: {
+			en: 'An API with the data of the scores of the different roads and destinations.',
+			fr: 'Une API contenant les données des scores des différentes routes et destinations.',
+			es: 'Una API con los datos de las puntuaciones de las diferentes carreteras y destinos.',
+		},
+		demoURL:
+			'https://ticket-to-ride-api-rest-node-js.onrender.com/api-docs',
 		repoURL: 'https://github.com/lrxgregory/node-ticket-to-ride-api-rest',
 		anim: 'fade-left',
 	},
 	{
 		imgSrc: '/img/falshcard.PNG',
-		title: 'Flashcard generator',
-		skills: ['JavaScript', 'CSS', 'HTML','PHP'],
-		descripcion:
-			'A website to create flashcard from a csv file. I created this website to help me to generate many flashcard to learning spanish.',
+		title: {
+			en: 'Flashcard Generator',
+			fr: 'Générateur de Flashcards',
+			es: 'Generador de Tarjetas',
+		},
+		skills: ['JavaScript', 'CSS', 'HTML', 'PHP'],
+		descripcion: {
+			en: 'A website to create flashcards from a CSV file. I created this website to help me generate many flashcards to learn Spanish.',
+			fr: "Un site web pour créer des flashcards à partir d'un fichier CSV. J'ai créé ce site pour m'aider à générer de nombreuses flashcards afin d'apprendre l'espagnol.",
+			es: 'Un sitio web para crear tarjetas a partir de un archivo CSV. Creé este sitio para ayudarme a generar muchas tarjetas y aprender español.',
+		},
 		demoURL: 'https://flashcardgenerator.online/',
 		repoURL: 'https://github.com/lrxgregory/flashcards',
 		anim: 'fade-right',
-	}
+	},
 ];
 
 const skillIcons = {
@@ -70,7 +100,7 @@ const skillIcons = {
 	Bootstrap: 'skill-icons:bootstrap',
 	Tailwind: 'skill-icons:tailwindcss-dark',
 	PHP: 'skill-icons:php-dark',
-	NodeJS: 'skill-icons:nodejs-dark'
+	NodeJS: 'skill-icons:nodejs-dark',
 };
 
 /**

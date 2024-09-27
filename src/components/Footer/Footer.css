@@ -19,6 +19,10 @@ footer {
     gap: 2rem;
 }
 
+.footer__container .flag__container {
+    display: none;
+}
+
 
 .footer__links{
     display: flex;
