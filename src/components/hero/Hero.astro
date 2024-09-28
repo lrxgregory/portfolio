@@ -1,16 +1,15 @@
 ---
+import * as m from '../../paraglide/messages.js';
 import Boton from '../atoms/Boton.astro';
 import './hero.css';
-
-const { translations } = Astro.props;
 ---
 
 <section class="hero">
 	<div class="hero__container">
 		<div class="text__content">
-			<p class="hero__title color__gradiente">{translations.hello}</p>
-			<h1 class="hero__text">{translations.job}</h1>
-			<Boton href="#about" texto={translations.aboutMe} />
+			<p class="hero__title color__gradiente">{m.hello}</p>
+			<h1 class="hero__text">{m.job}</h1>
+			<Boton href="#about" texto={m.aboutMe} />
 		</div>
 		<img
 			class="hero__img"

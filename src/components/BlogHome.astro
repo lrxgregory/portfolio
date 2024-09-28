@@ -1,14 +1,14 @@
 ---
 import { getCollection } from 'astro:content';
 import Title from '../components/atoms/Title.astro';
+import * as m from '../paraglide/messages.js';
 import Boton from './atoms/Boton.astro';
 import CardBlog from './CardBlog.astro';
 import FormattedDate from './FormattedDate.astro';
+
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
-
-const { translations } = Astro.props;
 ---
 
 <section
@@ -16,7 +16,7 @@ const { translations } = Astro.props;
 	class="flex flex-col w-full justify-center items-center h-auto"
 >
 	<div class="blog__container">
-		<Title contenido={translations.myArticles} />
+		<Title contenido={m.myArticles} />
 		<div class="blog__elements">
 			{
 				posts.slice(0, 3).map((post) => (
@@ -37,7 +37,7 @@ const { translations } = Astro.props;
 		</div>
 	</div>
 	<div class="flex justify-center m-5 max-w-full px-3">
-		<Boton href="/blog" texto={translations.seeMore} />
+		<Boton href="/blog" texto={m.seeMore} />
 	</div>
 </section>
 

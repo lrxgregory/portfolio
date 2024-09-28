@@ -8,23 +8,18 @@ import Hero from '../../components/hero/Hero.astro';
 import Portfolio from '../../components/Portfolio.astro';
 // import Skills from '../../components/skills/Skills.astro';
 import Layout from '../../layouts/Layout.astro';
-import { getTranslation } from '../../utils/getTranslation.js';
-
-// Récupérer la langue via l'URL (ou utiliser 'en' par défaut)
-const lang = new URL(Astro.request.url).pathname.replace(/^\/+/, '') || 'es';
-
-const translations = getTranslation(lang);
+import { languageTag } from '../../paraglide/runtime';
 ---
 
 <Layout title="Grégory Leroux | Developer PHP">
-	<Header origin={mainMenu} lang={lang} />
+	<Header origin={mainMenu} lang={languageTag()} />
 	<main class="self-center w-full">
 		<!-- Passer la traduction au composant Hero -->
-		<Hero translations={translations} />
-		<About translations={translations} />
+		<Hero />
+		<About />
 		<!-- <Skills /> -->
-		<Portfolio lang={lang} translations={translations} />
-		<BlogHome translations={translations} />
+		<Portfolio lang={languageTag()} />
+		<BlogHome />
 	</main>
-	<Footer translations={translations} />
+	<Footer />
 </Layout>

@@ -1,4 +1,6 @@
 ---
+import { languageTag } from '../paraglide/runtime';
+
 const {width, height} = Astro.props;
 const socialLinks = [
 	{
@@ -16,7 +18,7 @@ const socialLinks = [
 	{
 		title: 'CV',
 		icon: 'tabler:file-cv',
-		href: 'https://gregoryleroux.com/resume.pdf',
+		href: 'https://gregoryleroux.com/resume_' + languageTag() + '.pdf',
 		aria_label: 'Visit Gregory Leroux\'s Curiculum">'
 	},
 	{

@@ -2,6 +2,7 @@
 import Title from './atoms/Title.astro';
 import { getPortafolioData } from '../components/data/portfolioData.js';
 import Card from './card-portfolio/CardPortfolio.astro';
+import * as m from '../paraglide/messages.js';
 
 const { translations, lang } = Astro.props;
 ---
@@ -12,7 +13,7 @@ const { translations, lang } = Astro.props;
 >
 	<div class="portfolio__container">
 		<!-- Passer la traduction pour le titre -->
-		<Title contenido={translations.portfolio} />
+		<Title contenido={m.portfolio} />
 		<div class="portfolio__elements">
 			{
 				getPortafolioData.map((props) => (

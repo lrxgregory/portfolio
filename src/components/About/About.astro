@@ -1,9 +1,8 @@
 ---
+import * as m from '../../paraglide/messages.js';
 import SocialIcons from '../SocialIcons.astro';
 import Title from '../atoms/Title.astro';
 import './about.css';
-
-const { translations } = Astro.props;
 ---
 
 <section id="about" class="about">
@@ -15,31 +14,26 @@ const { translations } = Astro.props;
 		/>
 
 		<div class="about__content">
-			<Title margin="1rem" contenido={translations.aboutMe} />
+			<Title margin="1rem" contenido={m.aboutMe} />
 
-			<p
-				class="about__text"
-				set:html={translations.aboutMeDescription1}
-			/>
-			<p class="about__text">{translations.aboutMeDescription2}</p>
+			<p class="about__text" set:html={m.aboutMeDescription1()} />
+			<p class="about__text">{m.aboutMeDescription2}</p>
 			<ul class="about__text">
-				{translations.aboutSpecialized}
+				{m.aboutSpecialized}
 				{
-					translations.aboutMeSpecialization.map((item: string) => (
-						<li set:html={item} />
-					))
+					<li set:html={m.aboutMeSpecialization1()} />
+					<li set:html={m.aboutMeSpecialization2()} />
 				}
 			</ul>
-			<p class="about__text">{translations.aboutMeDescription3}</p>
+			<p class="about__text">{m.aboutMeDescription3}</p>
 			<ul class="about__text">
-				{translations.aboutLetsConnect}
+				{m.aboutLetsConnect}
 				{
-					translations.aboutMeConnect.map((item: string) => (
-						<li set:html={item} />
-					))
+					<li set:html={m.aboutMeConnect1()} />
+					<li set:html={m.aboutMeConnect2()} />
 				}
 			</ul>
-			<p class="about__text">{translations.aboutMeDescription4}</p>
+			<p class="about__text">{m.aboutMeDescription4}</p>
 
 			<SocialIcons width="25" height="25" />
 		</div>
