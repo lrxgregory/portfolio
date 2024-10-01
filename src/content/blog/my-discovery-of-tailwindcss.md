@@ -5,7 +5,7 @@ pubDate: 'Oct 01 2024'
 heroImage: "../img/tailwindcss.webp"
 ---
 
-![php image](/public/img/tailwindcss.webp)
+![php image](/img/tailwindcss.webp)
 
 ## My discovery of tailwindCSS
 
