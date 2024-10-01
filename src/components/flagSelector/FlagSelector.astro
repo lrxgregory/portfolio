@@ -1,7 +1,8 @@
 ---
 import './flagSelector.css';
 
-const { lang, isBlog } = Astro.props;
+const { lang } = Astro.props;
+const isBlog = Astro.url.pathname.includes('/blog');
 
 const flags = [
 	{

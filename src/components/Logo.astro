@@ -1,6 +1,6 @@
 ---
 import FlagSelector from '../components/flagSelector/FlagSelector.astro';
-const { name, lang, isBlog } = Astro.props;
+const { name, lang } = Astro.props;
 ---
 
 <a href="/" class="profile">
@@ -14,7 +14,7 @@ const { name, lang, isBlog } = Astro.props;
 		/>
 	</div>
 	<h3 class="color__gradiente header__title">{name}</h3>
-	<FlagSelector lang={lang} isBlog={isBlog} />
+	<FlagSelector lang={lang} />
 </a>
 
 <style>

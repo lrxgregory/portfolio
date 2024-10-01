@@ -9,9 +9,6 @@ type MenuItem = {
 	content: { [key: string]: string };
 	icon: string;
 };
-
-const currentURL = Astro.url.pathname;
-const isBlog = currentURL.includes('/blog');
 ---
 
 <header class="header">
@@ -36,7 +33,7 @@ const isBlog = currentURL.includes('/blog');
 						</li>
 					))
 				}
-				<FlagSelector lang={lang} isBlog={isBlog} />
+				<FlagSelector lang={lang} />
 			</ul>
 		</nav>
 	</div>
