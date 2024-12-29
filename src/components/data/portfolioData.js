@@ -51,24 +51,24 @@ export const portafolioData = [
 		repoURL: 'https://github.com/lrxgregory/react-ticket-to-ride',
 		anim: 'fade-left',
 	},
-	{
-		imgSrc: '/img/tickettorideapi.png',
-		title: {
-			en: 'Ticket To Ride NodeJS API',
-			fr: 'API NodeJS pour les Aventuriers du Rail',
-			es: 'Ticket To Ride API NodeJS',
-		},
-		skills: ['NodeJS'],
-		descripcion: {
-			en: 'An API with the data of the scores of the different roads and destinations.',
-			fr: 'Une API contenant les données des scores des différentes routes et destinations.',
-			es: 'Una API con los datos de las puntuaciones de las diferentes carreteras y destinos.',
-		},
-		demoURL:
-			'https://ticket-to-ride-api-rest-node-js.onrender.com/api-docs',
-		repoURL: 'https://github.com/lrxgregory/node-ticket-to-ride-api-rest',
-		anim: 'fade-left',
-	},
+	// {
+	// 	imgSrc: '/img/tickettorideapi.png',
+	// 	title: {
+	// 		en: 'Ticket To Ride NodeJS API',
+	// 		fr: 'API NodeJS pour les Aventuriers du Rail',
+	// 		es: 'Ticket To Ride API NodeJS',
+	// 	},
+	// 	skills: ['NodeJS'],
+	// 	descripcion: {
+	// 		en: 'An API with the data of the scores of the different roads and destinations.',
+	// 		fr: 'Une API contenant les données des scores des différentes routes et destinations.',
+	// 		es: 'Una API con los datos de las puntuaciones de las diferentes carreteras y destinos.',
+	// 	},
+	// 	demoURL:
+	// 		'https://ticket-to-ride-api-rest-node-js.onrender.com/api-docs',
+	// 	repoURL: 'https://github.com/lrxgregory/node-ticket-to-ride-api-rest',
+	// 	anim: 'fade-left',
+	// },
 	{
 		imgSrc: '/img/falshcard.PNG',
 		title: {
@@ -82,7 +82,7 @@ export const portafolioData = [
 			fr: "Un site web pour créer des flashcards à partir d'un fichier CSV. J'ai créé ce site pour m'aider à générer de nombreuses flashcards afin d'apprendre l'espagnol.",
 			es: 'Un sitio web para crear tarjetas a partir de un archivo CSV. Creé este sitio para ayudarme a generar muchas tarjetas y aprender español.',
 		},
-		demoURL: 'https://flashcardgenerator.online/',
+		demoURL: 'https://gregoryleroux.com/websites/flashcards/',
 		repoURL: 'https://github.com/lrxgregory/flashcards',
 		anim: 'fade-right',
 	},

@@ -1,13 +1,13 @@
 ---
 
 import type { CollectionEntry } from "astro:content";
+import { menuBlog } from "../components/data/menuData";
+import Footer from "../components/Footer/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import Header from "../components/header/Header.astro";
-import {  menuBlog } from "../components/data/menuData";
+import "../styles/global.css";
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 type Props = CollectionEntry<"blog">["data"];
-import "../styles/global.css"
-import Footer from "../components/Footer/Footer.astro";
 ---
 
 <!doctype html>
@@ -16,7 +16,7 @@ import Footer from "../components/Footer/Footer.astro";
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="/img/emoji.png" />
+    <link rel="icon" type="image/png" href="/img/bagy.png" />
 		<meta name="generator" content={Astro.generator} />
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />

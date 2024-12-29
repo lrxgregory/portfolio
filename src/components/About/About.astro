@@ -10,30 +10,27 @@ import './about.css';
 		<img
 			class="about__img"
 			src="/img/me.png"
-			alt="Foto de perfil de Jhon Doe"
+			alt="Photo de profil de Grégory"
 		/>
 
 		<div class="about__content">
 			<Title margin="1rem" contenido={m.aboutMe} />
 
 			<p class="about__text" set:html={m.aboutMeDescription1()} />
-			<p class="about__text">{m.aboutMeDescription2}</p>
-			<ul class="about__text">
-				{m.aboutSpecialized}
-				{
-					<li set:html={m.aboutMeSpecialization1()} />
-					<li set:html={m.aboutMeSpecialization2()} />
-				}
+			
+			<p class="about__text"><strong>{m.aboutSpecialized1}</strong> {m.aboutSpecialized2}</p>
+			<ul class="about__text about__list">
+				<li set:html={m.aboutMeSpecialization1()} />
+				<li set:html={m.aboutMeSpecialization2()} />
 			</ul>
-			<p class="about__text">{m.aboutMeDescription3}</p>
-			<ul class="about__text">
-				{m.aboutLetsConnect}
-				{
-					<li set:html={m.aboutMeConnect1()} />
-					<li set:html={m.aboutMeConnect2()} />
-				}
-			</ul>
-			<p class="about__text">{m.aboutMeDescription4}</p>
+
+			<p class="about__text"><strong>{m.whyMe1}</strong></p>
+			<p class="about__text">{m.whyMe2}</p>
+			<p class="about__text"><strong>{m.concreteExample1}</strong></p>
+			<p class="about__text">{m.concreteExample2} <strong>{m.concreteExample3}</strong>{m.concreteExample4}</p>
+			<p class="about__text"><strong>{m.contactCTA}</strong></p>
+			<p class="about__text"><strong>{m.aboutMeDescription4}</strong> {m.aboutMeDescription5}</p>
+
 
 			<SocialIcons width="25" height="25" />
 		</div>

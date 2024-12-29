@@ -13,7 +13,7 @@ export default defineConfig({
 	// Configuration pour l'internationalisation avec paraglide
 	i18n: {
 		locales: ['en', 'fr', 'es'],
-		defaultLocale: 'en',
+		defaultLocale: 'fr',
 	},
 	// Liste de toutes les intégrations
 	integrations: [

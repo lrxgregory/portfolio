@@ -27,7 +27,7 @@
 .hero .hero__img {
 	width: 100%;
 	max-width: 38rem;
-	border-radius: 50%;
+	/* border-radius: 50%; */
 	height: auto;
 }
 

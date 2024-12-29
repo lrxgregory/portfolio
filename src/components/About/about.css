@@ -41,6 +41,16 @@
 	color: var(--primary-100);
 }
 
+.about__list {
+    list-style-type: disc;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+.about__list li {
+    margin-bottom: 0.5rem;
+}
+
 @media screen and (max-width: 768px) {
 	.about__container {
 		padding: 8rem 3.1rem;

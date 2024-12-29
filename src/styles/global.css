@@ -1,37 +1,38 @@
 :root {
 	/* color  */
-	--primary-0: #003f5c; /* Couleur principale */
-	--primary-10: #1f6f7a;
-	--primary-20: #36899b;
-	--primary-30: #3e829a; /* Couleur principale */
-	--primary-40: #4d95b7;
-	--primary-50: #5da4c1;
-	--primary-60: #fcc22d;
-	--primary-70: #8fc2d2;
-	--primary-80: #b1d3da;
+	--primary-0: #2e3742; /* Nouvelle couleur principale */
+	--primary-10: #53c479;
+	--primary-20: #3fa76d;
+	--primary-30: #47bb7b; 
+	--primary-40: #50cf89;
+	--primary-50: #58e397;
+	--primary-60: #53c479; /* Nouvelle couleur accent */
+	--primary-70: #7aebad;
+	--primary-80: #8deebb;
 	--primary-90: #ffffff;
-	--primary-95: #eaf2f5;
-	--primary-99: #f7fcfc;
+	--primary-95: #f2f9f5;
+	--primary-99: #f9fcfa;
 	--primary-100: #ffffff;
-	--secondary-0: #fccc2d; /* Couleur secondaire */
-	--secondary-10: #f8a73a;
-	--secondary-20: #f69724;
-	--secondary-30: #fccc2d; /* Couleur secondaire */
-	--secondary-40: #fbb634;
-	--secondary-50: #f9a73a;
-	--secondary-60: #f8a842;
-	--secondary-70: #f7a74a;
-	--secondary-80: #f6a951;
-	--secondary-90: #f5ab59;
-	--secondary-95: #f4b362;
-	--secondary-99: #f3b968;
-	--secondary-100: #fcc22d;
 
-	/* colores de las propiedades */
-	--surface: #004b49; /* Couleur sombre contrastante */
-	--surface-variant: #e0d8e7;
-	--surface-dim: #8b9d9d;
-	--surface-bridge: #b4d8d8;
+	--secondary-0: #53c479; /* Nouvelle couleur secondaire */
+	--secondary-10: #2e3742;
+	--secondary-20: #364150;
+	--secondary-30: #53c479; /* Couleur secondaire accent */
+	--secondary-40: #3fa76d;
+	--secondary-50: #47bb7b;
+	--secondary-60: #50cf89;
+	--secondary-70: #58e397;
+	--secondary-80: #7aebad;
+	--secondary-90: #8deebb;
+	--secondary-95: #a0f1c9;
+	--secondary-99: #b3f4d7;
+	--secondary-100: #53c479;
+
+	/* couleurs des propriétés */
+	--surface: #2e3742; /* Nouvelle couleur sombre contrastante */
+	--surface-variant: #e0e3e7;
+	--surface-dim: #9da3aa;
+	--surface-bridge: #d4d8dd;
 
 	--primary: var(--primary-60);
 	--on-surface-primary: var(--primary-10);
@@ -64,7 +65,7 @@
 	--text-gradient: radial-gradient(
 		circle farthest-corner at center center,
 		#ffffff 0%,
-		#fcc22d 100%
+		#53c479 100%
 	);
 }
 
